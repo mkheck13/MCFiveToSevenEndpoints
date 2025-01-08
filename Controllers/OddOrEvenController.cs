@@ -15,10 +15,10 @@ namespace MCFiveToSevenEndpoints.Controllers
         }
 
         [HttpGet]
-        [Route("OddOrEven/{num}")]
-        public string oddOrEven(int num)
+        [Route("OddOrEven/{input}")]
+        public string oddOrEven(string input)
         {
-            return _oddOrEvenServices.oddOrEven(num);
+            return _oddOrEvenServices.oddOrEven(input);
         }
     }
 }

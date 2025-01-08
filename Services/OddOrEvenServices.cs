@@ -2,13 +2,24 @@ namespace MCFiveToSevenEndpoints.Services
 {
     public class OddOrEvenServices
     {
-        public string oddOrEven(int num)
+        public string oddOrEven(string input)
         {
-            if(num % 2 == 0)
+            bool isNum = int.TryParse(input, out int num);
+
+            if (isNum)
             {
-                return $"{num} appears to be even.";
-            }else{
-                return $"{num} appears to be odd.";
+                if (isNum && num % 2 == 0)
+                {
+                    return $"{num} appears to be even.";
+                }
+                else
+                {
+                    return $"{num} appears to be odd.";
+                }
+            }
+            else
+            {
+                return $"{input} was not a number. Try entering a number.";
             }
         }
     }
