@@ -22,6 +22,6 @@
 
 ## FeedBack/Peer Review:
 
-**Reviewer:** 
+**Reviewer:** Alexander Soria
 
-**Comments:** 
+**Comments:** All of your endpoints work as intended, complete with validation! Nicely done!
