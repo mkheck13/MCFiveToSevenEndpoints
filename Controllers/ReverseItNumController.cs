@@ -19,10 +19,10 @@ namespace MCFiveToSevenEndpoints.Controllers
         }
 
         [HttpGet]
-        [Route("ReverseNum/")]
-        public string ReverseNum(string input)
+        [Route("ReverseNum/{input}")]
+        public string reverseNum(string input)
         {
-            return _reverseItNumServices.ReverseNum(input);
+            return _reverseItNumServices.reverseNum(input);
         }
     }
 }

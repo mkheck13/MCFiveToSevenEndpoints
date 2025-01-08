@@ -4,7 +4,7 @@ namespace MCFiveToSevenEndpoints.Services
 {
     public class ReverseItNumServices
     {
-        public string ReverseNum(string input)
+        public string reverseNum(string input)
         {
             int revNumOut = 0;
             bool isTrue = int.TryParse(input, out int num);
