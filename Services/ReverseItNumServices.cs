@@ -1,3 +1,4 @@
+using System.Globalization;
 using Microsoft.AspNetCore.Components.Forms;
 
 namespace MCFiveToSevenEndpoints.Services
@@ -6,21 +7,21 @@ namespace MCFiveToSevenEndpoints.Services
     {
         public string reverseNum(string input)
         {
-            int revNumOut = 0;
-            bool isTrue = int.TryParse(input, out int num);
-            if(isTrue)
+            string revNumOut = "";
+            bool isNum = int.TryParse(input, out int num);
+
+            if(isNum)
             {
-                while(num != 0)
+                for(int i = num.ToString().Length - 1; i >= 0; i--)
                 {
-                    revNumOut = revNumOut * 10 + (num % 10);
-                    num = num / 10;
+                    revNumOut += num.ToString()[i];
                 }
+                return $"{input} reversed is {revNumOut}";
             }
             else
             {
-                return "Please enter a number and try again.";
+                return $"{input} is not a number";
             }
-            return $"{input} reversed is {revNumOut}";
         }
     }
 }
