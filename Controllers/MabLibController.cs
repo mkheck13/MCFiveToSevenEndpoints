@@ -19,6 +19,6 @@ namespace MCFiveToSevenEndpoints.Controllers
         public string mabLib(string age, string familyRelation, string job, string stageOfLife, string thing, string size, string humanSettlment, string toyBrand, string profession, string celestialBody)
         {
             return _mabLibServices.mabLib(age, familyRelation, job, stageOfLife, thing, size, humanSettlment, toyBrand, profession, celestialBody);
-        }  
+        }
     }
 }

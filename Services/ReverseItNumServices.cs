@@ -1,6 +1,3 @@
-using System.Globalization;
-using Microsoft.AspNetCore.Components.Forms;
-
 namespace MCFiveToSevenEndpoints.Services
 {
     public class ReverseItNumServices
@@ -10,9 +7,9 @@ namespace MCFiveToSevenEndpoints.Services
             string revNumOut = "";
             bool isNum = int.TryParse(input, out int num);
 
-            if(isNum)
+            if (isNum)
             {
-                for(int i = num.ToString().Length - 1; i >= 0; i--)
+                for (int i = num.ToString().Length - 1; i >= 0; i--)
                 {
                     revNumOut += num.ToString()[i];
                 }

@@ -1,5 +1,3 @@
-using System.Reflection.Metadata.Ecma335;
-
 namespace MCFiveToSevenEndpoints.Services
 {
     public class ReverseItAlphaServices
@@ -7,7 +5,7 @@ namespace MCFiveToSevenEndpoints.Services
         public string reverseAlpha(string input)
         {
             string reverseWord = "";
-            for(int i = input.Length - 1; i >= 0; i--)
+            for (int i = input.Length - 1; i >= 0; i--)
             {
                 reverseWord += input[i];
             }
